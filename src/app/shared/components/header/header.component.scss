@@ -1,0 +1,54 @@
+.header {
+  background-color: var(--background-header-color);
+  height: 100px;
+}
+.header__container {
+  width: 65%;
+  margin: 0 auto;
+  padding: 5px 0px;
+  display: grid;
+  grid-template-areas: "left-top center-top right-top" "left-bottom center-bottom right-bottom";
+  grid-template-columns: 162px 580px 390px;
+  grid-template-rows: 40px 28px;
+  gap: 12px;
+  .header_logo {
+    height: 34px;
+    width: 134px;
+    grid-area: left-top;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .header_location {
+    grid-area: left-bottom;
+    height: 28px;
+    width: 100%;
+  }
+  .header_search {
+    grid-area: center-top;
+    width: 100%;
+    input {
+      width: 100%;
+      padding: 5px;
+      height: 30px;
+    }
+  }
+  .center-bottom {
+    grid-area: center-bottom;
+  }
+  .right-bottom {
+    grid-area: right-bottom;
+  }
+  .header_disney_banner {
+    grid-area: right-top;
+    a {
+      height: 39px;
+      width: 340px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
