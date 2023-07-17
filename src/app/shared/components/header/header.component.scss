@@ -80,6 +80,7 @@
       }
     }
     i {
+      cursor: pointer;
       float: right;
       width: 26px;
       outline: none;
@@ -117,7 +118,7 @@
     .header_nav_links {
       display: flex;
       flex-flow: row wrap;
-      gap: 15px;
+      gap: 20px;
       .nav_links {
         color: var(--muted-text-color);
         opacity: 0.6;

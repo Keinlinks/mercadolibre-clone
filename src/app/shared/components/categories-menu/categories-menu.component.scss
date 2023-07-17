@@ -1,0 +1,44 @@
+button {
+  position: relative;
+  cursor: pointer;
+  color: var(--muted-text-color);
+  opacity: 0.6;
+  transition: 0.4s ease-out;
+  &:hover {
+    opacity: 0.9;
+  }
+  &::after {
+    border-style: solid;
+    border-width: 0 1.5px 1.5px 0;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 2px;
+    color: rgba(0, 0, 0, 0.3);
+    margin: 0;
+    bottom: 5px;
+    right: -10px;
+    position: absolute;
+    padding: 2px;
+  }
+}
+ul {
+  margin: 1.2rem 0 0 0;
+  border-radius: 5px;
+  position: absolute;
+  width: 250px;
+  background-color: #333333;
+  color: white;
+  padding: 1rem 0px;
+  li {
+    list-style: none;
+    margin: 12px 0px;
+    padding: 0.8rem 1rem;
+
+    &:hover {
+      background-color: var(--color-blue);
+    }
+  }
+}
