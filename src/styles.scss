@@ -4,6 +4,7 @@
   --blue-color: #3483fa;
   --muted-text-color: rgb(51, 51, 51);
   --color-blue: #3483fa;
+  --background-color: #ebebeb;
 }
 
 * {
@@ -14,6 +15,7 @@
 body {
   font-family: Arial, sans-serif;
   font-size: 14px;
+  background-color: var(--background-color);
 }
 a {
   text-decoration: none;

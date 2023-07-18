@@ -1,15 +1,18 @@
 <button (click)="togglemenu()">Categorias</button>
-<ul *ngIf="toggle" (mouseleave)="togglemenuleave()">
-  <a href="#"><li>Vehiculos</li></a>
-  <a href="#"><li>Inmuebles</li></a>
-  <a href="#"><li>Supermercado</li> </a>
-  <a href="#"><li>Tecnologia</li></a>
-  <a href="#"><li>Accesorio para vehiculos</li></a>
-  <a href="#"><li>Electrodomésticos</li></a>
-  <a href="#"><li>Hogar y Muebles</li></a>
-  <a href="#"><li>Belleza y Cuidado personal</li></a>
-  <a href="#"><li>Moda</li></a>
-  <a href="#"><li>Juegos y Juguetes</li></a>
-  <a href="#"><li>Deportes y Fitness</li></a>
-  <a href="#"><li>Mascotas</li></a>
-</ul>
+<div class="categories_menu">
+  <ul *ngIf="toggle" (mouseleave)="togglemenuleave()">
+    <a href="#"><li>Vehiculos</li></a>
+    <a href="#"><li>Inmuebles</li></a>
+    <a href="#"><li>Supermercado</li> </a>
+    <a href="#"><li>Tecnologia</li></a>
+    <a href="#"><li>Accesorio para vehiculos</li></a>
+    <a href="#"><li>Electrodomésticos</li></a>
+    <a href="#"><li>Hogar y Muebles</li></a>
+    <a href="#"><li>Belleza y Cuidado personal</li></a>
+    <a href="#"><li>Moda</li></a>
+    <a href="#"><li>Juegos y Juguetes</li></a>
+    <a href="#"><li>Deportes y Fitness</li></a>
+    <a href="#"><li>Mascotas</li></a>
+  </ul>
+</div>
+<div class="block" *ngIf="toggle"></div>

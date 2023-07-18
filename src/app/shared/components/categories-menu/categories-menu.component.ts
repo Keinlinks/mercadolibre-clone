@@ -15,6 +15,6 @@ export class CategoriesMenuComponent implements OnInit {
   togglemenuleave() {
     setTimeout(() => {
       this.toggle = !this.toggle;
-    }, 500);
+    }, 300);
   }
 }
