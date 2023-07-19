@@ -1,6 +1,7 @@
-.container {
+.slider_container {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
   gap: 1rem;
+  box-sizing: border-box;
 }

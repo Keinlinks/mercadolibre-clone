@@ -41,3 +41,22 @@
     }
   }
 }
+
+.image_container {
+  display: flex;
+  justify-content: center;
+}
+.carousel-control-prev {
+  position: absolute;
+  top: 140px;
+  width: 32px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  height: 70px;
+  background-color: white;
+  border-radius: 0 64px 64px 0;
+  z-index: 9999;
+}
+.custom-button {
+  display: block;
+}

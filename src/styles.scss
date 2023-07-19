@@ -1,3 +1,6 @@
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+
 :root {
   --background-header-color: #fff159;
   --primary-color: #fff159;
@@ -25,6 +28,6 @@ a {
 button {
   all: unset;
 }
-
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+p {
+  margin: 0;
+}
