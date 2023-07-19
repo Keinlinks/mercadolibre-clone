@@ -1,0 +1,48 @@
+.container {
+  max-width: 222px;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    + .container {
+      color: red;
+      background: red;
+    }
+  }
+  .card_image {
+    img {
+      width: 100%;
+      border-radius: 4px;
+    }
+  }
+  .info_card {
+    padding: 1rem;
+    .price {
+      font-size: 1.3rem;
+    }
+    .OFF {
+      font-size: 0.8rem;
+      color: var(--green-color);
+    }
+  }
+  .green_text {
+    color: var(--green-color);
+  }
+  .shipment {
+    font-weight: 600;
+    padding: 7px 0;
+  }
+  .item_name {
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .discount {
+    display: none;
+    font-size: 0.8rem;
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.container:hover .discount {
+  display: block;
+}

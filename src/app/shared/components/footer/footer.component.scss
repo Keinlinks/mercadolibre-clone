@@ -1,0 +1,23 @@
+.footer_background {
+  background-color: white;
+  width: 100%;
+  border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
+}
+.footer {
+  padding: 1rem;
+  margin-left: 22rem;
+
+  font-size: 0.78rem;
+  ul {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+    color: #333;
+  }
+  li {
+    list-style: none;
+  }
+  p {
+    color: rgba($color: #000000, $alpha: 0.6);
+  }
+}
