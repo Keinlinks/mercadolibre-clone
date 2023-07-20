@@ -1,7 +1,34 @@
 .slider_container {
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
   gap: 1rem;
-  box-sizing: border-box;
+  border-radius: 7px;
+}
+:host ::ng-deep .carousel-control-prev {
+  justify-content: flex-start;
+  width: 32px;
+}
+:host ::ng-deep .carousel-control-next {
+  justify-content: flex-end;
+  width: 32px;
+}
+:host ::ng-deep .carousel-control-prev-icon,
+:host ::ng-deep .carousel-control-next-icon {
+  background-color: #d3c3c3;
+  border-radius: 50%;
+  padding: 2rem;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+  background-size: 32px 32px;
+}
+:host ::ng-deep .carousel-indicators {
+  display: none;
+}
+.height {
+  height: 450px;
+}
+:host ::ng-deep .carousel,
+:host ::ng-deep .carousel-inner,
+:host ::ng-deep .slider_container,
+:host ::ng-deep .carousel-item {
+  height: 100%;
 }

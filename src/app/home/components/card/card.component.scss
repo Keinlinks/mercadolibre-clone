@@ -1,4 +1,4 @@
-.container {
+.card_container {
   max-width: 222px;
   background-color: white;
   border-radius: 4px;
@@ -43,6 +43,6 @@
   }
 }
 
-.container:hover .discount {
+.card_container:hover .discount {
   display: block;
 }

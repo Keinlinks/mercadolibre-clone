@@ -1,4 +1,15 @@
-<div class="slider_container">
-  <app-card></app-card><app-card></app-card><app-card></app-card
-  ><app-card></app-card><app-card></app-card>
+<div class="height">
+  <ngb-carousel
+    #carousel
+    [interval]="10000"
+    [pauseOnHover]="pauseOnHover"
+    [pauseOnFocus]="pauseOnFocus"
+  >
+    <ng-template ngbSlide *ngFor="let img of images; index as i">
+      <div class="slider_container">
+        <app-card></app-card><app-card></app-card><app-card></app-card
+        ><app-card></app-card><app-card></app-card>
+      </div>
+    </ng-template>
+  </ngb-carousel>
 </div>
