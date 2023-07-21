@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from 'src/app/models/item-model';
+import { ItemsDataService } from 'src/app/services/items-data.service';
 
 @Component({
   selector: 'app-slider-items',
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slider-items.component.scss'],
 })
 export class SliderItemsComponent implements OnInit {
-  constructor() {}
-  images = [62, 83];
+  items: Item[] = [];
+  constructor(private service: ItemsDataService) {
+    this.items = service.getItems();
+  }
+  images = [62, 0];
   ngOnInit(): void {}
   paused = false;
   unpauseOnArrow = false;

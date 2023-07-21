@@ -1,18 +1,22 @@
 .card_container {
-  max-width: 222px;
+  width: 222px;
   background-color: white;
   border-radius: 4px;
   cursor: pointer;
-  &:hover {
-    + .container {
-      color: red;
-      background: red;
-    }
-  }
+  min-height: 382px;
+
   .card_image {
+    height: 220px;
+    width: 220px;
     img {
       width: 100%;
+      height: 100%;
       border-radius: 4px;
+      object-fit: contain;
+      object-position: center;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      aspect-ratio: auto 224 / 224;
     }
   }
   .info_card {
@@ -34,6 +38,11 @@
   }
   .item_name {
     color: rgba(0, 0, 0, 0.8);
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Número de líneas deseado */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .discount {
     display: none;
@@ -45,4 +54,7 @@
 
 .card_container:hover .discount {
   display: block;
+}
+hr {
+  margin: 0;
 }

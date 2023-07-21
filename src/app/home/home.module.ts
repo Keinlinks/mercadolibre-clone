@@ -6,6 +6,8 @@ import { PayBannerComponent } from './components/pay-banner/pay-banner.component
 import { SliderItemsComponent } from './components/slider-items/slider-items.component';
 import { CardComponent } from './components/card/card.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { NumberPointPipe } from '../pipes/number-point.pipe';
+import { DisneySectionComponent } from './components/disney-section/disney-section.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     PayBannerComponent,
     SliderItemsComponent,
     CardComponent,
+    NumberPointPipe,
+    DisneySectionComponent,
   ],
   imports: [CommonModule, NgbCarouselModule],
   exports: [HomeComponent],

@@ -48,6 +48,7 @@
 }
 :host ::ng-deep .carousel-control-prev,
 :host ::ng-deep .carousel-control-next {
+  display: none;
   position: absolute;
   top: 140px;
   width: 32px;
@@ -65,4 +66,8 @@
 :host ::ng-deep .carousel-control-next-icon {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%3483fa'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
   background-size: 32px 32px;
+}
+.carrousel:hover :host ::ng-deep .carousel-control-prev,
+:host ::ng-deep .carousel-control-next {
+  display: flex;
 }
