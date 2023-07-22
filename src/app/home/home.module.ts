@@ -8,6 +8,7 @@ import { CardComponent } from './components/card/card.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { NumberPointPipe } from '../pipes/number-point.pipe';
 import { DisneySectionComponent } from './components/disney-section/disney-section.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { DisneySectionComponent } from './components/disney-section/disney-secti
     NumberPointPipe,
     DisneySectionComponent,
   ],
-  imports: [CommonModule, NgbCarouselModule],
+  imports: [CommonModule, NgbCarouselModule, RouterModule],
   exports: [HomeComponent],
 })
 export class HomeModule {}

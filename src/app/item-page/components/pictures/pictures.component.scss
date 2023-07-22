@@ -1,0 +1,41 @@
+.images_cnt {
+  width: 100%;
+  height: 500px;
+}
+.pictures {
+  width: 100%;
+  height: 500px;
+  padding-top: 3rem;
+  picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    float: right;
+    width: 80%;
+    height: auto;
+    margin: 0 3rem 0 0;
+  }
+}
+.thumbails {
+  float: left;
+  .thumbails_image {
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    border-radius: 7px;
+    padding: 2px;
+    margin-bottom: 0.7rem;
+    input {
+      position: absolute;
+      opacity: 1;
+    }
+  }
+  .border_blue {
+    border: 2px solid #3483fa;
+  }
+
+  img {
+    width: 44px;
+    height: 44px;
+  }
+}

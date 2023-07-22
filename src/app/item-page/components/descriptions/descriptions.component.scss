@@ -1,0 +1,70 @@
+.description_cnt {
+  border: 1px solid rgba($color: #000000, $alpha: 0.2);
+  padding: 1.1rem;
+  border-radius: 7px;
+  a {
+    color: var(--blue-color);
+  }
+}
+.info_header {
+  line-height: 1.8rem;
+  p {
+    color: rgba($color: #000000, $alpha: 0.4);
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+.best_sell {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  align-items: center;
+  margin: 0.5rem 0;
+  p {
+    padding: 0 3px;
+    border-radius: 3px;
+    color: white;
+    background: var(--orange-color);
+    font-weight: 700;
+  }
+  a {
+    font-size: 0.7rem;
+  }
+}
+.price {
+  font-size: 2.3rem;
+}
+.prices_final {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.OFF {
+  font-size: 1.3rem;
+  color: var(--green-color);
+}
+.discount {
+  font-size: 1.3rem;
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.5);
+}
+.cuotes {
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 1.1rem;
+  span {
+    color: var(--green-color);
+  }
+  a {
+    font-size: 0.9rem;
+  }
+}
+.buttons {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+  button {
+    height: 35px;
+  }
+}

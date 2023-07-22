@@ -1,22 +1,24 @@
-<div class="card_container">
-  <div class="card_image">
-    <img [src]="item.image" [alt]="item.name" />
+<a [routerLink]="['/productos', item.id]"
+  ><div class="card_container">
+    <div class="card_image">
+      <img [src]="item.image" [alt]="item.name" />
+    </div>
+    <hr />
+    <div class="info_card">
+      <div *ngIf="show_discount" class="discount">
+        $ {{ item.price_original | numberPoint }}
+      </div>
+      <div>
+        <span class="price">$ {{ item.price_final | numberPoint }} </span
+        ><span *ngIf="show_discount" class="OFF">{{ item.discount }}% OFF</span>
+      </div>
+      <div class="green_text">
+        {{ item.cuotes }}x ${{ cuotes | numberPoint }} sin interes
+      </div>
+      <div class="shipment green_text" *ngIf="item.free_shipment">
+        Envío gratis
+      </div>
+      <div class="item_name">{{ item.name }}</div>
+    </div>
   </div>
-  <hr />
-  <div class="info_card">
-    <div *ngIf="show_discount" class="discount">
-      $ {{ item.price_original | numberPoint }}
-    </div>
-    <div>
-      <span class="price">$ {{ item.price_final | numberPoint }} </span
-      ><span *ngIf="show_discount" class="OFF">{{ item.discount }}% OFF</span>
-    </div>
-    <div class="green_text">
-      {{ item.cuotes }}x ${{ cuotes | numberPoint }} sin interes
-    </div>
-    <div class="shipment green_text" *ngIf="item.free_shipment">
-      Envío gratis
-    </div>
-    <div class="item_name">{{ item.name }}</div>
-  </div>
-</div>
+</a>

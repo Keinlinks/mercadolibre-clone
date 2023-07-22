@@ -1,0 +1,18 @@
+.principal_container {
+  width: 60%;
+  min-height: 1080px;
+  background-color: white;
+  margin: 2rem auto;
+  position: relative;
+  border-radius: 4px;
+  padding: 1rem;
+}
+.pictures_container {
+  width: 70%;
+  float: left;
+}
+.description_container,
+.extra-info_container {
+  width: 30%;
+  float: left;
+}

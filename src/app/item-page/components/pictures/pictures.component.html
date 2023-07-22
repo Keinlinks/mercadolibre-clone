@@ -1,0 +1,18 @@
+<div class="images_cnt">
+  <div class="thumbails">
+    <div
+      #thumbail
+      class="thumbails_image"
+      *ngFor="let thumbail of thumbails; let i = index"
+    >
+      <label [for]="'thumbail_' + i" (mouseover)="hover($event)"
+        ><img [id]="'thumbail_image_' + i" [src]="thumbail" alt=""
+      /></label>
+    </div>
+  </div>
+  <div class="pictures">
+    <picture>
+      <img [src]="thumbails[picture_number]" alt="" />
+    </picture>
+  </div>
+</div>
