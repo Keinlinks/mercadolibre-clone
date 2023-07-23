@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  Input,
   QueryList,
   ViewChildren,
 } from '@angular/core';
@@ -18,13 +19,13 @@ export class PicturesComponent implements AfterViewInit {
     this.thumbails_ref[0].nativeElement.classList.add('border_blue');
   }
   @ViewChildren('thumbail') thumbails_list!: QueryList<ElementRef>;
-  thumbails: string[] = [
-    'https://http2.mlstatic.com/D_NQ_NP_852939-MLC48709153016_122021-O.webp',
-    'https://http2.mlstatic.com/D_NQ_NP_881203-MLC48709153009_122021-O.webp',
-    'https://http2.mlstatic.com/D_NQ_NP_745660-MLC51671181900_092022-O.webp',
-    'https://http2.mlstatic.com/D_NQ_NP_806861-MLC51671181899_092022-O.webp',
-    'https://http2.mlstatic.com/D_NQ_NP_953497-MLC48709153013_122021-O.webp',
-    'https://http2.mlstatic.com/D_NQ_NP_940425-MLC69056701030_042023-O.webp',
+  @Input() thumbails: string[] = [
+    'https://http2.mlstatic.com/D_Q_NP_852939-MLC48709153016_122021-R.webp',
+    'https://http2.mlstatic.com/D_Q_NP_881203-MLC48709153009_122021-R.webp',
+    'https://http2.mlstatic.com/D_Q_NP_745660-MLC51671181900_092022-R.webp',
+    'https://http2.mlstatic.com/D_Q_NP_806861-MLC51671181899_092022-R.webp',
+    'https://http2.mlstatic.com/D_Q_NP_953497-MLC48709153013_122021-R.webp',
+    'https://http2.mlstatic.com/D_Q_NP_940425-MLC69056701030_042023-R.webp',
   ];
   picture_number: number = 0;
   thumbails_ref: ElementRef[] = [];

@@ -1,22 +1,27 @@
 <div class="description_cnt">
   <div class="info_header">
-    <p>Nuevo | +25 vendidos</p>
-    <h1>Notebook Asus X515 Intel Core I3 8gb Ram 256 Ssd 15.6'</h1>
+    <p>
+      <span *ngIf="item.new">Nuevo</span> <span *ngIf="!item.new">Usado</span> |
+      +<span *ngIf="item.new">50</span>
+      <span *ngIf="!item.new">25</span> vendidos
+    </p>
+    <h1>{{ item.name }}</h1>
   </div>
   <div class="reviews">
     <a href="#"></a>
   </div>
   <div class="best_sell">
     <p>Mas vendido</p>
-    <a>13º en Notebooks</a>
+    <a href="#">13º en Notebooks</a>
   </div>
   <div class="prices_cnt">
-    <div class="discount">$579.990</div>
+    <div class="discount">${{ item.price_original | numberPoint }}</div>
     <div class="prices_final">
-      <span class="price">$359.990</span><span class="OFF">37% OFF</span>
+      <span class="price">${{ item.price_final | numberPoint }}</span
+      ><span class="OFF">37% OFF</span>
     </div>
     <div class="cuotes">
-      <p>en <span>6x $59.998 sin interés</span></p>
+      <p>en {{ item.cuotes }}x ${{ cuotes | numberPoint }} sin interes</p>
       <a href="#">Ver los medios de pago</a>
     </div>
   </div>
@@ -30,22 +35,55 @@
   <div class="shipment">
     <div class="shipment_icon"></div>
     <div class="info">
-      <p>Llega gratis el martes</p>
+      <p>Llega gratis <span>el martes</span></p>
       <p>
         Solo en Santiago de Chile Comprando dentro de las próximas
         <span>17 h 28 min </span>
       </p>
     </div>
   </div>
-  <div class="info_extra">
+  <div class="info_item">
     <p>Color: <span>Gris</span></p>
     <p>Stock disponible</p>
     <div class="stock">
-      <p>Cantidad: <span>1 Unidad</span> <span>(14 disponibles)</span></p>
+      <p>
+        Cantidad: <span>1 Unidad</span>
+        <span>({{ item.stock_count }} disponibles)</span>
+      </p>
     </div>
   </div>
   <div class="buttons">
     <button class="btn btn-primary">Comprar ahora</button>
-    <button class="btn btn-secondary">Agregar al carrito</button>
+    <button class="btn btn-secondary" (click)="addCart()">
+      Agregar al carrito
+    </button>
+  </div>
+  <div class="info_extra">
+    <div class="info">
+      <div class="icon"></div>
+
+      <p>
+        <a href="#">Devolución gratis. </a
+        ><span>Tienes 30 días desde que lo recibes.</span>
+      </p>
+    </div>
+    <div class="info">
+      <div class="icon"></div>
+
+      <p>
+        <a href="#">Compra Protegida, </a
+        ><span
+          >recibe el producto que esperabas o te devolvemos tu dinero.</span
+        >
+      </p>
+    </div>
+    <div class="info">
+      <div class="icon"></div>
+
+      <p>
+        <a href="#">Mercado Puntos. </a
+        ><span>Sumas <span>1312</span> puntos.</span>
+      </p>
+    </div>
   </div>
 </div>

@@ -1,8 +1,10 @@
 <div class="principal_container">
   <div class="pictures_container">
-    <app-pictures></app-pictures>
+    <app-pictures [thumbails]="item.image"></app-pictures>
+
+    <app-extra-info></app-extra-info>
   </div>
   <div class="description_container">
-    <app-descriptions></app-descriptions>
+    <app-descriptions class="sticky" [item]="item"></app-descriptions>
   </div>
 </div>

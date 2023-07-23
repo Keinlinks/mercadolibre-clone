@@ -1,7 +1,7 @@
 <a [routerLink]="['/productos', item.id]"
   ><div class="card_container">
     <div class="card_image">
-      <img [src]="item.image" [alt]="item.name" />
+      <img [src]="item.image[0] | imageLink" [alt]="item.name" />
     </div>
     <hr />
     <div class="info_card">

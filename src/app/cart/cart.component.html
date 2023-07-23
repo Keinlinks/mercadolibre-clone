@@ -1,16 +1,48 @@
 <div class="cart_container">
-  <div class="cart">
+  <div class="cart_empty" *ngIf="!items[0]">
     <div class="image_cart"></div>
     <div class="text">
       <h4>¡Empieza un carrito de compras!</h4>
       <p>Suma productos y consigue envío gratis.</p>
     </div>
-
-    <button class="btn btn-primary">Descubrir productos</button>
+    <button type="button" class="btn btn-primary">Descubrir productos</button>
   </div>
-  <div class="resume">
+  <div class="cart" *ngIf="items[0]">
+    <div #items_ *ngFor="let item of items" class="item_cnt">
+      <article>
+        <div class="image">
+          <img [src]="item.image[0]" />
+        </div>
+        <div class="name">
+          <h3>{{ item.name }}</h3>
+          <button (click)="removeItem(item.id)">Eliminar</button>
+          <button>Comprar ahora</button>
+        </div>
+      </article>
+
+      <div class="count_cnt">
+        <div class="count">
+          <button>-</button>
+          <p>1</p>
+          <button>+</button>
+        </div>
+        <p class="stock">{{ item.stock_count }} disponibles</p>
+      </div>
+      <div class="price">
+        <div>${{ item.price_final | numberPoint }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="resume" *ngIf="!items[0]">
     <h2>Resumen de compra</h2>
     <hr />
     <p>Aquí verás los importes de tu compra una vez que agregues productos.</p>
+  </div>
+  <div class="resume actived" *ngIf="items[0]">
+    <h2>Resumen de compra</h2>
+    <div class="total">
+      <p>Total</p>
+      <h3>${{ totalPay | numberPoint }}</h3>
+    </div>
   </div>
 </div>

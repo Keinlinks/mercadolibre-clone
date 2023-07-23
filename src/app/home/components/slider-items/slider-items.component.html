@@ -7,11 +7,7 @@
   >
     <ng-template ngbSlide *ngFor="let img of images; index as i">
       <div class="slider_container">
-        <app-card [item]="items[0]"></app-card
-        ><app-card [item]="items[1]"></app-card
-        ><app-card [item]="items[2]"></app-card
-        ><app-card [item]="items[3]"></app-card
-        ><app-card [item]="items[4]"></app-card>
+        <app-card *ngFor="let item of items" [item]="item"></app-card>
       </div>
     </ng-template>
   </ngb-carousel>

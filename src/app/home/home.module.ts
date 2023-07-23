@@ -6,9 +6,10 @@ import { PayBannerComponent } from './components/pay-banner/pay-banner.component
 import { SliderItemsComponent } from './components/slider-items/slider-items.component';
 import { CardComponent } from './components/card/card.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
-import { NumberPointPipe } from '../pipes/number-point.pipe';
 import { DisneySectionComponent } from './components/disney-section/disney-section.component';
 import { RouterModule } from '@angular/router';
+import { NumberPointPipe } from '../pipes/number-point.pipe';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -17,10 +18,10 @@ import { RouterModule } from '@angular/router';
     PayBannerComponent,
     SliderItemsComponent,
     CardComponent,
-    NumberPointPipe,
+
     DisneySectionComponent,
   ],
-  imports: [CommonModule, NgbCarouselModule, RouterModule],
+  imports: [CommonModule, NgbCarouselModule, RouterModule, PipesModule],
   exports: [HomeComponent],
 })
 export class HomeModule {}
