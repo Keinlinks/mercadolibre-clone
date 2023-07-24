@@ -1,0 +1,217 @@
+<section class="section">
+  <div class="principal_cnt">
+    <form (ngSubmit)="submit()" [formGroup]="loginForm">
+      <div class="h1"><h1>Completa los datos para crear tu cuenta</h1></div>
+      <label for="email_r" class="form">
+        <div class="icon">
+          <svg
+            width="24px"
+            height="16px"
+            viewBox="0 0 24 16"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <title>Thumbnail</title>
+            <defs>
+              <rect
+                id="path-1"
+                x="0"
+                y="0"
+                width="344"
+                height="85"
+                rx="6"
+              ></rect>
+              <filter
+                x="-7.8%"
+                y="-24.7%"
+                width="115.7%"
+                height="163.5%"
+                filterUnits="objectBoundingBox"
+                id="filter-2"
+              >
+                <feOffset
+                  dx="0"
+                  dy="6"
+                  in="SourceAlpha"
+                  result="shadowOffsetOuter1"
+                ></feOffset>
+                <feGaussianBlur
+                  stdDeviation="8"
+                  in="shadowOffsetOuter1"
+                  result="shadowBlurOuter1"
+                ></feGaussianBlur>
+                <feColorMatrix
+                  values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0"
+                  type="matrix"
+                  in="shadowBlurOuter1"
+                ></feColorMatrix>
+              </filter>
+              <circle id="path-3" cx="20" cy="20" r="20"></circle>
+            </defs>
+            <g
+              id="Registro-ML---nativo-"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <g
+                id="HUB---Validación-de-e-mail"
+                transform="translate(-28.000000, -205.000000)"
+              >
+                <rect
+                  fill="#FFFFFF"
+                  x="0"
+                  y="0"
+                  width="360"
+                  height="640"
+                ></rect>
+                <g id="Group" transform="translate(8.000000, 179.000000)">
+                  <g id="🔲-Shadow-style">
+                    <use
+                      fill="black"
+                      fill-opacity="1"
+                      filter="url(#filter-2)"
+                      xlink:href="#path-1"
+                    ></use>
+                    <use
+                      fill="#FFFFFF"
+                      fill-rule="evenodd"
+                      xlink:href="#path-1"
+                    ></use>
+                  </g>
+                  <g
+                    id="02-Medium-/-01-Simple-/-With-Thumbnail-+-Text-+-Description"
+                    transform="translate(12.000000, 0.000000)"
+                  >
+                    <g
+                      id="Thumbnail"
+                      transform="translate(0.000000, 14.000000)"
+                    >
+                      <g id="Thumbnail-state">
+                        <g id="一-/-Thumbnail-/-BG-/-ICON-Default">
+                          <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                          </mask>
+                          <circle
+                            stroke-opacity="0.0700000003"
+                            stroke="#000000"
+                            cx="20"
+                            cy="20"
+                            r="19.5"
+                          ></circle>
+                        </g>
+                        <g
+                          id="Group"
+                          transform="translate(8.000000, 8.000000)"
+                          fill="#3483FA"
+                          fill-rule="nonzero"
+                        >
+                          <g id="🖼Icon">
+                            <path
+                              d="M23.25,4.546797 L23.25,19.4798466 L0.75,19.4798466 L0.75,4.546797 L23.25,4.546797 Z M21.75,8.791797 L13.860521,13.3006585 C12.7754645,13.9206907 11.457949,13.9571632 10.3455444,13.4100759 L10.139479,13.3006585 L2.25,8.792797 L2.25,17.979 L21.75,17.979 L21.75,8.791797 Z M21.75,6.046 L2.25,6.046 L2.25,7.064797 L10.8836874,11.9982937 C11.5222014,12.3631589 12.294878,12.3912254 12.9540324,12.0824934 L13.1163126,11.9982937 L21.75,7.063797 L21.75,6.046 Z"
+                              id="Combined-Shape"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                      <g
+                        id="Badge-type"
+                        transform="translate(28.000000, 24.000000)"
+                      ></g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <input
+          id="email_r"
+          type="email"
+          placeholder="Tu correo..."
+          formControlName="email"
+        />
+      </label>
+      <label for="password" class="form">
+        <div class="icon">
+          <svg
+            width="16"
+            height="24"
+            viewBox="0 0 16 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M9.49989 15C9.49989 15.8284 8.82831 16.5 7.99989 16.5C7.17146 16.5 6.49989 15.8284 6.49989 15C6.49989 14.1716 7.17146 13.5 7.99989 13.5C8.82831 13.5 9.49989 14.1716 9.49989 15Z"
+              fill="#3483FA"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.2519 6.002V8.98398H15.4632V18C15.4632 20.8995 13.1126 23.25 10.2132 23.25H5.78662C2.88713 23.25 0.536621 20.8995 0.536621 18V8.98398H2.74789V6.002C2.74789 3.1014 5.09929 0.75 7.99989 0.75C10.9005 0.75 13.2519 3.1014 13.2519 6.002ZM4.24789 8.98398V6.002C4.24789 3.92983 5.92771 2.25 7.99989 2.25C10.0721 2.25 11.7519 3.92983 11.7519 6.002V8.98398H4.24789ZM13.9632 10.484V18C13.9632 20.0711 12.2842 21.75 10.2132 21.75H5.78662C3.71555 21.75 2.03662 20.0711 2.03662 18V10.484H13.9632Z"
+              fill="#3483FA"
+            ></path>
+          </svg>
+        </div>
+        <input
+          id="password"
+          type="password"
+          placeholder="Tu contraseña"
+          formControlName="password"
+        />
+      </label>
+      <label for="password_r" class="form">
+        <div class="icon">
+          <svg
+            width="16"
+            height="24"
+            viewBox="0 0 16 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M9.49989 15C9.49989 15.8284 8.82831 16.5 7.99989 16.5C7.17146 16.5 6.49989 15.8284 6.49989 15C6.49989 14.1716 7.17146 13.5 7.99989 13.5C8.82831 13.5 9.49989 14.1716 9.49989 15Z"
+              fill="#3483FA"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.2519 6.002V8.98398H15.4632V18C15.4632 20.8995 13.1126 23.25 10.2132 23.25H5.78662C2.88713 23.25 0.536621 20.8995 0.536621 18V8.98398H2.74789V6.002C2.74789 3.1014 5.09929 0.75 7.99989 0.75C10.9005 0.75 13.2519 3.1014 13.2519 6.002ZM4.24789 8.98398V6.002C4.24789 3.92983 5.92771 2.25 7.99989 2.25C10.0721 2.25 11.7519 3.92983 11.7519 6.002V8.98398H4.24789ZM13.9632 10.484V18C13.9632 20.0711 12.2842 21.75 10.2132 21.75H5.78662C3.71555 21.75 2.03662 20.0711 2.03662 18V10.484H13.9632Z"
+              fill="#3483FA"
+            ></path>
+          </svg>
+        </div>
+        <input
+          id="password_r"
+          type="password"
+          placeholder="Repite la contraseña"
+          formControlName="password_copy"
+        />
+      </label>
+      <ngb-alert
+        style="text-align: center"
+        type="danger"
+        [dismissible]="true"
+        *ngIf="show_error"
+        (closed)="show_error = false"
+      >
+        Las contraseñas no son iguales.
+      </ngb-alert>
+      <button
+        [disabled]="loginForm.invalid"
+        type="submit"
+        class="btn btn-primary"
+      >
+        Registrarse
+      </button>
+      <button type="button" class="btn btn-secondary" routerLink="/login">
+        Iniciar sesion
+      </button>
+    </form>
+  </div>
+</section>
+<button (click)="getuser()">dsds</button>

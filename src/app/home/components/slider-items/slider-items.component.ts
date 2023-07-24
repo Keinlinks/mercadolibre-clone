@@ -8,6 +8,7 @@ import { Item } from 'src/app/models/item-model';
 })
 export class SliderItemsComponent implements OnInit {
   @Input() items: Item[] = [];
+  items_copy: Item[] = [];
   @Input() seed: number = 2;
   slides: number = 1;
   constructor() {}
@@ -31,6 +32,7 @@ export class SliderItemsComponent implements OnInit {
       const j = Math.floor(Math.random() * n);
       [value[i], value[j]] = [value[j], value[i]];
     }
-    this.items = value;
+    console.log(value);
+    this.items_copy = value;
   }
 }

@@ -5,7 +5,9 @@
       <h4>¡Empieza un carrito de compras!</h4>
       <p>Suma productos y consigue envío gratis.</p>
     </div>
-    <button type="button" class="btn btn-primary">Descubrir productos</button>
+    <button routerLink="" type="button" class="btn btn-primary">
+      Descubrir productos
+    </button>
   </div>
   <div class="cart" *ngIf="items[0]">
     <div #items_ *ngFor="let item of items" class="item_cnt">
