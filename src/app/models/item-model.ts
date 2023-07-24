@@ -10,4 +10,5 @@ export interface Item {
   new: boolean;
   stock_enable: boolean;
   stock_count: number;
+  amount?: number;
 }

@@ -39,7 +39,35 @@ export class CartComponent implements OnInit {
       return this.cart_ids_b.includes(id);
     });
     this.items.map((data) => {
-      this.totalPay += data.price_final;
+      data.amount = 1;
+    });
+    this.totalPayFuntion();
+  }
+  addAmount(id: number) {
+    for (let item of this.items) {
+      if (item.id == id && item.amount! < item.stock_count) {
+        item.amount = item.amount || 0;
+        item.amount++;
+        this.totalPay += item.price_final;
+      }
+    }
+    this.totalPayFuntion();
+  }
+  removeAmount(id: number) {
+    for (let item of this.items) {
+      if (item.id === id && item.amount != 1) {
+        item.amount = item.amount || 0;
+        item.amount--;
+        this.totalPay -= item.price_final;
+      }
+    }
+    this.totalPayFuntion();
+  }
+  totalPayFuntion() {
+    this.totalPay = 0;
+    this.items.map((data) => {
+      data.amount = data.amount || 1;
+      this.totalPay += data.price_final * data.amount;
     });
   }
 }

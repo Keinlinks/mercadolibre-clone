@@ -24,9 +24,9 @@
 
       <div class="count_cnt">
         <div class="count">
-          <button>-</button>
-          <p>1</p>
-          <button>+</button>
+          <button (click)="removeAmount(item.id)">-</button>
+          <p>{{ item.amount }}</p>
+          <button (click)="addAmount(item.id)">+</button>
         </div>
         <p class="stock">{{ item.stock_count }} disponibles</p>
       </div>
