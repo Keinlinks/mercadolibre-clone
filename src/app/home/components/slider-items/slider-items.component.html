@@ -5,9 +5,15 @@
     [pauseOnHover]="pauseOnHover"
     [pauseOnFocus]="pauseOnFocus"
   >
-    <ng-template ngbSlide *ngFor="let img of images; index as i">
+    <ng-template
+      ngbSlide
+      *ngFor="let slides of items.slice(0, slides); let i = index"
+    >
       <div class="slider_container">
-        <app-card *ngFor="let item of items" [item]="item"></app-card>
+        <app-card
+          *ngFor="let item of items.slice(i * 5, i * 5 + 5)"
+          [item]="item"
+        ></app-card>
       </div>
     </ng-template>
   </ngb-carousel>

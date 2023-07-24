@@ -12,21 +12,33 @@
       <h2>Basado en tu última visita</h2>
       <a href="#">Ver historial</a>
     </div>
-    <app-slider-items class="slider-items" [items]="items"></app-slider-items>
+    <app-slider-items
+      class="slider-items"
+      [items]="items"
+      [seed]="0.9"
+    ></app-slider-items>
   </section>
   <section class="section_slider">
     <div class="items-text">
       <h2>Relacionado con tus visitas en Computación</h2>
       <a href="#">Ver historial</a>
     </div>
-    <app-slider-items class="slider-items" [items]="items"></app-slider-items>
+    <app-slider-items
+      class="slider-items"
+      [items]="items"
+      [seed]="0.2"
+    ></app-slider-items>
   </section>
   <section class="section_slider">
     <div class="items-text">
       <h2>Ofertas</h2>
       <a href="#">Ver todas</a>
     </div>
-    <app-slider-items class="slider-items" [items]="items"></app-slider-items>
+    <app-slider-items
+      class="slider-items"
+      [items]="items"
+      [seed]="0.1"
+    ></app-slider-items>
   </section>
   <section class="disney_section">
     <app-disney-section></app-disney-section>

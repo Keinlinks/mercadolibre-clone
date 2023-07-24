@@ -125,13 +125,16 @@
     font-size: 0.9rem;
     border: none;
   }
-  button:nth-child(2) {
+  .addcart {
     color: #3483fa;
     background-color: rgba($color: #3483fa, $alpha: 0.1);
     animation: 0.4s ease-out;
     &:hover {
       background-color: rgba($color: #3483fa, $alpha: 0.2);
     }
+  }
+  .removeCart {
+    background-color: rgba(187, 45, 59, 50%);
   }
 }
 .info_extra {

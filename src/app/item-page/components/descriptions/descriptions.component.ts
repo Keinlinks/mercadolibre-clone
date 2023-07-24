@@ -16,15 +16,32 @@ export class DescriptionsComponent implements OnInit {
   @Input() item!: Item;
   cuotes: number = 1;
   show_discount: boolean = true;
-  show_alert: boolean = false;
+  added_cart: boolean = false;
+  show_alert_succes: boolean = false;
+  show_alert_error: boolean = false;
   ngOnInit(): void {
     this.cuotes = Math.round(this.item.price_final / this.item.cuotes);
     if (this.item.price_original == this.item.price_final)
       this.show_discount = false;
     else this.show_discount = true;
+    let cartProducts = this.service.getCartProducts();
+    if (cartProducts.includes(this.item.id.toString())) {
+      this.added_cart = true;
+    }
   }
   addCart() {
-    this.service.addToCart(this.item.id.toString());
-    this.show_alert = !this.show_alert;
+    let cartProducts = this.service.getCartProducts();
+    if (!cartProducts.includes(this.item.id.toString())) {
+      this.show_alert_succes = true;
+      this.show_alert_error = false;
+      this.service.addToCart(this.item.id.toString());
+      this.added_cart = true;
+    }
+  }
+  removeItem() {
+    this.service.removeFromCart(this.item.id.toString());
+    this.added_cart = false;
+    this.show_alert_error = true;
+    this.show_alert_succes = false;
   }
 }

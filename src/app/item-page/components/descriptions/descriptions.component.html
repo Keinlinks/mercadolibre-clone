@@ -54,9 +54,35 @@
   </div>
   <div class="buttons">
     <button class="btn btn-primary">Comprar ahora</button>
-    <button class="btn btn-secondary" (click)="addCart()">
+    <button
+      *ngIf="!added_cart"
+      class="btn btn-secondary addcart"
+      (click)="addCart()"
+    >
       Agregar al carrito
     </button>
+    <button
+      class="btn btn-danger removeCart"
+      *ngIf="added_cart"
+      (click)="removeItem()"
+    >
+      Eliminar del carrito
+    </button>
+    <ngb-alert
+      [dismissible]="true"
+      *ngIf="show_alert_succes"
+      (closed)="show_alert_succes = false"
+    >
+      El producto se ha agregado al carrito.
+    </ngb-alert>
+    <ngb-alert
+      [dismissible]="true"
+      *ngIf="show_alert_error"
+      (closed)="show_alert_error = false"
+      type="danger"
+    >
+      producto eliminado del carrito.
+    </ngb-alert>
   </div>
   <div class="info_extra">
     <div class="info">
