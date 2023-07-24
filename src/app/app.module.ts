@@ -6,7 +6,6 @@ import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { CartModule } from './cart/cart.module';
 import { ItemPageModule } from './item-page/item-page.module';
-import { NumberPointPipe } from './pipes/number-point.pipe';
 
 @NgModule({
   declarations: [AppComponent],
