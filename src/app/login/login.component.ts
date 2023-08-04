@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private service: UserService,
     private router: Router
-  ) {}
+  ) { }
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
@@ -29,11 +29,12 @@ export class LoginComponent implements OnInit {
   }
   submit() {
     if (this.loginForm.valid) {
-      const username = this.loginForm.get('email')!.value;
-      const password = this.loginForm.get('password')!.value;
+      const username: string = this.loginForm.get('email')!.value;
+      const password: string = this.loginForm.get('password')!.value;
       let response: boolean[] = this.service.validateUser(username, password);
       if (response[0]) {
         if (response[1]) {
+          this.service.emmitLogin(true, username)
           this.router.navigate(['']);
         } else this.password_error = true;
       } else this.show_alert_error = true;

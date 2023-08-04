@@ -6,6 +6,7 @@
   flex-flow: row wrap;
   gap: 2rem;
   margin-top: 2rem;
+
   .cart_empty {
     width: calc(65% - 2rem);
     height: 450px;
@@ -23,16 +24,20 @@
       height: 35px;
     }
   }
+
   .text {
     text-align: center;
     font-size: 1rem;
+
     h4 {
       font-size: 1.1rem;
     }
+
     p {
       color: rgba($color: #000000, $alpha: 0.5);
     }
   }
+
   .resume {
     width: calc(35% - 0.5rem);
     min-height: 150px;
@@ -41,29 +46,36 @@
     border-radius: 10px;
     scale: 0.9;
     color: rgba($color: #000000, $alpha: 0.2);
+
     h2 {
       font-size: 1.2rem;
       font-weight: 700;
       padding: 1.5rem 1.5rem 0.5rem 1.5rem;
     }
+
     p {
       padding: 0 1.5rem;
     }
   }
+
   .actived {
     background-color: white;
     color: black;
+
     h2 {
       border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
       padding-bottom: 2rem;
     }
+
     .total {
       margin: 1rem 0;
       display: flex;
       justify-content: space-between;
+
       p {
         font-size: 1.5rem;
       }
+
       h3 {
         margin-right: 2rem;
       }
@@ -77,6 +89,7 @@
   background-color: white;
   border-radius: 10px;
   padding: 1rem;
+
   .item_cnt {
     border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
     display: flex;
@@ -84,15 +97,18 @@
     padding: 1rem;
     align-items: center;
     justify-content: space-between;
+
     .name {
-      max-width: 390px;
-      min-width: 390px;
+      width: 390px;
+
     }
+
     article {
       display: flex;
       align-items: center;
       gap: 1rem;
     }
+
     div:nth-child(2) {
       h3 {
         font-size: 1.1rem;
@@ -102,37 +118,56 @@
         overflow: hidden;
         text-overflow: ellipsis;
       }
+
       button {
         color: var(--blue-color);
         margin-right: 2rem;
       }
     }
+
     .price {
       div {
         font-size: 1.2rem;
       }
     }
+
     .count {
       border: 1px solid rgba($color: #000000, $alpha: 0.1);
       border-radius: 7px;
       height: 35px;
       display: flex;
+
       p {
         font-size: 0.9rem;
       }
+
       button {
         text-align: center;
         margin: 0 auto;
         width: 50px;
       }
+
       p {
         margin: auto 0;
       }
     }
+
     .stock {
       margin-top: 1rem;
       font-size: 0.7rem;
       text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .cart {
+
+
+    .item_cnt {
+      .name {
+        width: 200px;
+      }
     }
   }
 }

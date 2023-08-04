@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  login: boolean = true
+  currentUser: string = "Usuario"
+  constructor(private service: UserService) {
+    service.login$.subscribe(res => {
+      this.login = res
+      this.currentUser = service.getCurrentUser().name.split("@")[0]
+    })
 
-  ngOnInit(): void {}
+  }
+
+  ngOnInit(): void { }
 }

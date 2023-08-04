@@ -6,12 +6,23 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class UserService {
-  constructor() {}
+  constructor() { }
   private alert: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   public alert$: Observable<boolean> = this.alert.asObservable();
+  private login: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  public login$: Observable<boolean> = this.login.asObservable();
+
+  currentUser: User = { "id": 0, "name": "", "password": "" }
 
   public emmit(value: boolean) {
     this.alert.next(value);
+  }
+  public emmitLogin(value: boolean, userCurrent: string) {
+    this.currentUser = this.getUserData(userCurrent)
+    this.login.next(value);
+  }
+  getCurrentUser() {
+    return this.currentUser
   }
 
   //---------------------------
@@ -19,10 +30,8 @@ export class UserService {
 
   getAllUser(): User[] {
     const storedData = localStorage.getItem(this.STORAGE_KEY_2);
-    console.log('Stored Data:', storedData);
 
     const parsedData = storedData ? JSON.parse(storedData) : [];
-    console.log('Parsed Data:', parsedData);
 
     return parsedData;
   }
@@ -35,7 +44,6 @@ export class UserService {
       name: email,
       password: password,
     };
-    console.log(allUser);
     allUser.push(user);
 
     localStorage.setItem(this.STORAGE_KEY_2, JSON.stringify(allUser));
@@ -62,7 +70,21 @@ export class UserService {
       if (password == password_user) {
         passwordValidate = true;
       }
+
     });
     return [emailValidate, passwordValidate];
+  }
+  getUserID(id: number) {
+    const user = this.getAllUser().find((data) => {
+      data.id == id
+    })
+    return user
+  }
+  getUserData(email: string): User {
+
+    const user = this.getAllUser().find((data) => {
+      return data.name === email
+    })
+    return user || { "id": 0, "name": "", "password": "" }
   }
 }

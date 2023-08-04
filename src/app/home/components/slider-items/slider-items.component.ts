@@ -11,7 +11,7 @@ export class SliderItemsComponent implements OnInit {
   items_copy: Item[] = [];
   @Input() seed: number = 2;
   slides: number = 1;
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     this.slides = this.items.length;
@@ -32,7 +32,6 @@ export class SliderItemsComponent implements OnInit {
       const j = Math.floor(Math.random() * n);
       [value[i], value[j]] = [value[j], value[i]];
     }
-    console.log(value);
     this.items_copy = value;
   }
 }

@@ -3,8 +3,7 @@
     <div class="header_logo">
       <a routerLink="">
         <img
-          src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.22.13/mercadolibre/logo__large_plus@2x.png"
-      /></a>
+          src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.22.13/mercadolibre/logo__large_plus@2x.png" /></a>
     </div>
     <div class="header_location">
       <i class="fa-solid fa-location-dot"></i>
@@ -22,27 +21,23 @@
     </div>
     <div class="center-bottom header_nav">
       <div class="header_nav_links">
-        <app-categories-menu class="nav_links muted-text"></app-categories-menu
-        ><a href="#" class="nav_links muted-text">Ofertas</a
-        ><a href="#" class="nav_links muted-text">Historial</a
-        ><a href="#" class="nav_links link_new">Supermercado</a
-        ><a href="#" class="nav_links muted-text link">Moda</a
-        ><a href="#" class="nav_links muted-text link">Vender</a
-        ><a href="#" class="nav_links muted-text">Ayuda</a>
+        <app-categories-menu class="nav_links muted-text"></app-categories-menu><a href="#"
+          class="nav_links muted-text">Ofertas</a><a href="#" class="nav_links muted-text">Historial</a><a href="#"
+          class="nav_links link_new">Supermercado</a><a href="#" class="nav_links muted-text link">Moda</a><a href="#"
+          class="nav_links muted-text link">Vender</a><a href="#" class="nav_links muted-text">Ayuda</a>
       </div>
     </div>
     <div class="header_disney_banner">
       <a href="#">
-        <img
-          src="https://http2.mlstatic.com/D_NQ_757831-MLA69342170755_052023-OO.webp"
-          alt="disney"
-        />
+        <img src="https://http2.mlstatic.com/D_NQ_757831-MLA69342170755_052023-OO.webp" alt="disney" />
       </a>
     </div>
     <div class="right-bottom header_nav">
       <div class="header_nav_links profile">
-        <a routerLink="/registrarse">Crea tu cuenta</a
-        ><a routerLink="/login">Ingresa</a><a routerLink="cart">Mis compras</a>
+        <span class="header_nav_links" *ngIf="!login"> <a routerLink="/registrarse">Crea tu cuenta</a><a
+            routerLink="/login">Ingresa</a></span> <a *ngIf="login" href="#"><i style="margin-right: 5px;"
+            class="fa-regular fa-user"></i>{{currentUser}}</a><a routerLink="cart">Mis
+          compras</a>
       </div>
       <a routerLink="/cart" class="header_nav_cart">
         <i class="fa-solid fa-cart-shopping"></i>
