@@ -2,7 +2,7 @@
   <div class="pictures_container">
     <app-pictures [thumbails]="item.image"></app-pictures>
 
-    <app-extra-info></app-extra-info>
+    <app-extra-info>{{ item.name }}</app-extra-info>
   </div>
   <div class="description_container">
     <app-descriptions class="sticky" [item]="item"></app-descriptions>
